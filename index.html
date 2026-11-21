@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For You ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== EDIT DATA DI SINI ===== -->
+<!-- Nama, tanggal, kontak, isi surat bisa diganti langsung di HTML ini -->
+
+<div id="opening"><div class="open-inner"><span class="open-heart">♡</span><p>Ada kejutan kecil menunggumu...</p><button class="btn primary" id="enter">Buka ♡</button></div></div>
+<div class="cursor" id="cursor"></div>
+<div class="hearts" id="hearts"></div>
+
+<header class="nav" id="nav">
+  <a href="#home" class="logo">For You ♡</a>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <nav id="menu">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About You</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#memories">Memories</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-photo reveal">
+    <img src="assets/images/profile.jpg" alt="Foto profil" onerror="this.classList.add('noimg')">
+  </div>
+  <div class="hero-text reveal">
+    <h1>Hi, My <span class="hl">Favorite Person!</span></h1>
+    <h2>I'm so lucky to have <span class="hl typed" id="typed"></span><span class="caret">|</span></h2>
+    <p class="sub">A little website, made with a lot of love.</p>
+    <p>Setiap hari aku melihatmu adalah halaman favorit dalam cerita hidupku. Website kecil ini kubuat untuk menyimpan semua hal yang membuatku jatuh cinta padamu, lagi dan lagi.</p>
+    <div class="socials">
+      <a href="https://instagram.com/instagram_kamu" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+      <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+      <a href="mailto:email@contoh.com" aria-label="Email">✉</a>
+      <a href="#memories" aria-label="Memories">♥</a>
+    </div>
+    <div class="btns">
+      <a href="#about" class="btn outline">Discover More</a>
+      <button class="btn outline fill" id="openSurprise">Open Your Surprise</button>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <h2 class="title reveal">About You</h2>
+  <div class="about-top reveal">
+    <img src="assets/images/profile2.jpg" alt="Foto" onerror="this.classList.add('noimg')">
+    <div>
+      <h3>Sely Malika Salsabila</h3>
+      <p class="muted">Lahir: 14 Desember 2009</p>
+      <p>Kamu adalah orang yang bisa membuat hari paling berat terasa ringan hanya dengan melihat senyummu. Terima kasih sudah menjadi kamu.</p>
+    </div>
+  </div>
+  <div class="cards">
+    <article class="card reveal"><span>🎧</span><h4>Hobi &amp; Kesukaan</h4><p>Cinta Terlarang, Seblak, Jalan jalan, dan film favorit.</p></article>
+    <article class="card reveal"><span>✨</span><h4>Yang Istimewa</h4><p>Baik,Lucu, dan selalu bikin orang di sekitarmu Selalu Tersenyum.</p></article>
+    <article class="card reveal"><span>💌</span><h4>Untukmu</h4><p>Kamu belum mejadi pacarku, tetapi aku harap kamu mau jadi pacarku  ^_^.</p></article>
+  </div>
+</section>
+
+<section id="gallery" class="section alt">
+  <h2 class="title reveal">Gallery</h2>
+  <div class="filters reveal">
+    <button class="chip active" data-f="all">All</button>
+    <button class="chip" data-f="moments">Our Moments</button>
+    <button class="chip" data-f="favorite">Favorite Pictures</button>
+    <button class="chip" data-f="special">Special Days</button>
+  </div>
+  <div class="grid" id="grid">
+    <figure class="shot reveal" data-c="moments"><img src="assets/images/gallery/photo1.jpg" alt="" onerror="this.classList.add('noimg')"><figcaption>Hari pertama kita jalan bareng</figcaption></figure>
+    <figure class="shot reveal" data-c="favorite"><img src="assets/images/gallery/photo2.jpg" alt="" onerror="this.classList.add('noimg')"><figcaption>Senyum favoritku</figcaption></figure>
+    <figure class="shot reveal" data-c="special"><img src="assets/images/gallery/photo3.jpg" alt="" onerror="this.classList.add('noimg')"><figcaption>Hari ulang tahunmu</figcaption></figure>
+    <figure class="shot reveal" data-c="moments"><img src="assets/images/gallery/photo4.jpg" alt="" onerror="this.classList.add('noimg')"><figcaption>Berdua denganmu</figcaption></figure>
+    <figure class="shot reveal" data-c="favorite"><img src="assets/images/gallery/photo5.jpg" alt="" onerror="this.classList.add('noimg')"><figcaption>Foto yang selalu kulihat lagi</figcaption></figure>
+    <figure class="shot reveal" data-c="special"><img src="assets/images/gallery/photo6.jpg" alt="" onerror="this.classList.add('noimg')"><figcaption>Apapun tentang kamu</figcaption></figure>
+  </div>
+</section>
+
+<section id="memories" class="section">
+  <h2 class="title reveal">Our Memories</h2>
+  <div class="timeline">
+    <div class="tl reveal"><i>♥</i><div class="tl-body"><img src="assets/images/memories/m1.jpg" alt="" onerror="this.classList.add('noimg')"><time>7 September 2026</time><h4>Pertama Kali kamu chat aku</h4><p>Chat yang kuanggap bercanda, ternyata awal dari segalanya.</p></div></div>
+    <div class="tl reveal"><i>♥</i><div class="tl-body"><img src="assets/images/memories/m2.jpg" alt="" onerror="this.classList.add('noimg')"><time>25 Oktober 2026</time><h4>Momen Pertama Bersama</h4><p>Canggung, tertawa, dan tidak ingin hari itu berakhir.</p></div></div>
+    <div class="tl reveal"><i>♥</i><div class="tl-body"><img src="assets/images/memories/m3.jpg" alt="" onerror="this.classList.add('noimg')"><time>10 september 2026</time><h4>Kenangan Paling Berkesan</h4><p>Hari saat aku yakin, kamu orangnya.</p></div></div>
+    <div class="tl reveal"><i>♥</i><div class="tl-body"><img src="assets/images/memories/m4.jpg" alt="" onerror="this.classList.add('noimg')"><time>25 oktober 2026</time><h4>Hari-Hari Spesial</h4><p>Setiap tanggal bersamamu terasa layak dirayakan.</p></div></div>
+    <div class="tl reveal"><i>♥</i><div class="tl-body"><img src="assets/images/memories/m5.jpg" alt="" onerror="this.classList.add('noimg')"><time>Untuk Masa Depan</time><h4>Pesan untuk Kita</h4><p>Semoga kita bersama selamanya, saling menjaga, dan tidak pernah berhenti saling memilih.</p></div></div>
+  </div>
+</section>
+
+<section id="contact" class="section alt">
+  <h2 class="title reveal">Contact</h2>
+  <p class="center reveal">Kalau kamu kangen , aku selalu ada untukmu dihatimu.</p>
+  <ul class="info reveal">
+    <li>✉️ taufiqnurrahman.smk1@gmail.com</li>
+    <li>📷 @tauu_fiqnr</li>
+    <li>💬 +62 851 6647 5265</li>
+  </ul>
+  <div class="btns center-btns reveal">
+    <a class="btn primary" href="mailto:taufiqnurrahman.smk1@gmail.com?subject=Hi%20from%20you">Send Me a Message</a>
+    <a class="btn ghost" href="• https://www.instagram.com/tauu_fiqnr?utm_source=qr" target="_blank" rel="noopener">Instagram</a>
+    <a class="btn ghost" href="https://wa.me/6285166475265" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+  <p class="center closing reveal">Terima kasih sudah menjadi alasan aku tersenyum setiap hari.</p>
+</section>
+</main>
+
+<footer>
+  <div class="foot-main">
+    <div class="foot-logo">♡</div>
+    <p class="made">Made with love, especially for you.</p>
+    <p class="foot-line">✉ taufiqnurrahman.smk1@gmail.com</p>
+    <p class="foot-line">💬 +62 851 6647 5265</p>
+    <div class="foot-social">
+      <a class="btn ghost" href="https://www.instagram.com/tauu_fiqnr?utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+      <a class="btn ghost" href="https://wa.me/6285166475265" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+      <a class="btn ghost" href="mailto:taufiqnurrahman.smk1@gmail.com" aria-label="Email">✉</a>
+    </div>
+  </div>
+  <div class="foot-bar"><strong>© 2026 For You ♡</strong> Setiap detik bersamamu berharga.</div>
+</footer>
+
+<button id="toTop" class="fab top" aria-label="Back to Top">↑</button>
+<button id="music" class="fab music" aria-label="Putar musik">♫</button>
+<audio id="audio" src="assets/music/music.mp3"></audio>
+
+<div id="lightbox" class="lightbox"><button id="lbClose" aria-label="Tutup">×</button><img id="lbImg" alt=""><p id="lbCap"></p></div>
+
+<div id="letterWrap" class="letter-wrap">
+  <div class="envelope" id="envelope">
+    <div class="flap"></div><div class="pocket"></div>
+    <div class="letter">
+      <h3>Untuk Kamu ♡</h3>
+      <!-- GANTI ISI SURAT DI BAWAH -->
+      <p>Sayang,</p>
+      <p>Aku tidak pandai merangkai kata, tapi aku ingin kamu tahu bahwa kamu adalah hal terbaik yang pernah terjadi padaku. Terima kasih untuk setiap tawa, sabar, dan pelukan.</p>
+      <p>Aku sayang kamu, hari ini dan seterusnya.</p>
+      <p class="sign">Dari yang selalu mencintaimu</p>
+      <button class="btn primary" id="closeLetter">Close</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
